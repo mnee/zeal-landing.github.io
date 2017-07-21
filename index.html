@@ -24,7 +24,7 @@
         
         // Get state settings from optimizely object
         var state = optimizely.get('state');
-        var exp_id = state.getActiveExperimentIds()[0];
+        var exp_id = state.getActiveExperimentIds()[1];
         mixpanel.track("landing_page_load", {
             "Experiment Name": optimizely.get('data').experiments[exp_id].name,
             "Variation Name": state.getVariationMap()[exp_id].name 
