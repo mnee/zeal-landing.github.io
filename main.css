@@ -1,0 +1,429 @@
+#header_1 {
+    width: 100vw; 
+    position: absolute;
+    height: 70px;
+    left: 0px;
+    background-color: transparent;
+}
+
+#logo {
+    position: absolute; 
+    left:10px; 
+    top: 10px; 
+    height: 45px; 
+    object-fit: cover
+}
+
+body {
+    background-color: white
+}
+
+#button_text {
+    bottom: 0px;
+    color: rgb(101, 102, 144);
+    cursor: pointer;
+    display: block;
+    height: 37px;
+    left: -45px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(101, 102, 144);
+    top: 0px;
+    white-space: nowrap;
+    width: 273.391px;
+    column-rule-color: rgb(101, 102, 144);
+    align-self: center;
+    perspective-origin: 136.688px 18.5px;
+    transform-origin: 136.688px 18.5px;
+    border: 0px none rgb(101, 102, 144);
+    font: normal normal bold normal 27px / 37.8px sans-serif;
+    outline: rgb(101, 102, 144) none 0px;
+    transition: color 0.4s ease 0s
+}
+    
+#footer_signup {
+    bottom: -80px;
+    box-sizing: border-box;
+    display: block;
+    height: 80px;
+    position: fixed;
+    text-align: center;
+    width: 100vw;
+    z-index: 47;
+    align-items: center;
+    justify-content: center;
+    background-color: #06274E;
+    font: normal normal normal normal 16px / 16px sans-serif;
+    transition: bottom 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+#button_text_2 {
+    position: relative;
+    bottom: -17.5px;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    margin: auto;
+    background-color: #00cc00;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 217.25px;
+    column-rule-color: rgb(255, 255, 255);
+    align-self: center;
+    perspective-origin: 108.625px 22.5px;
+    transform-origin: 108.625px 22.5px;
+    user-select: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px 30px 30px 30px;
+    font: normal normal bold normal 14px / 14px sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 16px 8px 27px
+}
+    
+#button_text_2:hover {
+    background-color:rgba(57,255,20, 0.7)
+}
+
+#myCarousel {
+    width: 100%; 
+    position:absolute; 
+    left:0; 
+    right:0; 
+    z-index: -1
+}
+
+.carousel_image {
+    width: 100vw; 
+    height: 526px; 
+    object-fit: cover
+}
+
+.carousel_text_box {
+    position: absolute; 
+    top: 70px; 
+    width: 415px; 
+    height: 400px; 
+    background-color: white; 
+    opacity: 0.8
+}
+
+.carousel_text_1 {
+    position: absolute; 
+    top: 120px; 
+    width: 300px; 
+    font-family: Baskerville, Geneva, sans-serif; 
+    font-size: 18px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 600; 
+    color: black; 
+    letter-spacing: 2px
+}
+
+.carousel_text_2 {
+    position: absolute; 
+    top: 150px; 
+    width: 320px; 
+    font-family: Baskerville, Geneva, sans-serif; 
+    font-size: 20px; 
+    font-style: italic; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 45px; 
+    color: black
+}
+
+.carousel_text_3 {
+    position: absolute; 
+    top: 200px; 
+    width: 320px; 
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 30px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 45px; 
+    color: #06274E
+}
+
+.carousel_text_4 {
+    position: absolute; 
+    width: 320px; 
+    font-family: Baskerville, Geneva, sans-serif; 
+    font-size: 20px; 
+    font-style: italic; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 45px; 
+    color: black
+}
+
+.blue_strip {
+    height: 85px; 
+    background-color: #06274E; 
+    width: 100vw;
+    z-index: 45;
+}
+
+#section_2 {
+    height: 150px; 
+    position: relative;
+    top: 235px;
+    background-color: #656690; 
+    width: 100vw;
+    z-index:46;
+}
+
+#descriptors {
+    position: relative; 
+    top:25px; 
+    width: 800px; 
+    height: 100px; 
+    object-fit: cover; 
+    display:block; 
+    margin:auto;
+}
+
+#section_3 {
+    height: px; 
+    position: absolute; 
+    background-color: white; 
+    top: 1000px; 
+    width: 100vw;
+}
+
+#cac_text {
+    position: relative; 
+    display: block; 
+    width: 700px; 
+    margin: auto; 
+    text-align: center; 
+    top: 0px; 
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 30px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 40px;
+    letter-spacing: 1.5px;
+}
+
+#contact {
+    width: 600px; 
+    height: 28px; 
+    display: block; 
+    margin:auto; 
+    position: relative; 
+    top: 23px;
+}
+
+#footer_space {
+    height: 115px; 
+    position: relative; 
+    top: 465px; 
+    background-color: white; 
+    width: 100vw;
+}
+
+#rectangle_2 {
+    width: 100vw;
+	height: 400px;
+    position: absolute;
+    top: 100vh;
+    z-index: 40;
+	background-image: linear-gradient(to bottom, #2ec5e8, #28e8fd);
+    opacity: 0.8
+}
+
+#Demo_Img {
+    width: 100vw;
+	height: 400px;
+    position: absolute;
+    top: 100vh;
+    z-index: 39;
+    object-fit: cover;
+    object-position: 10% 40%;
+}
+
+#play_button {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    top: 105px;
+    z-index: 41;
+    cursor: pointer;
+}
+
+#watch_demo {
+    width: 100px;
+	height: 14px;
+	font-family: sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-align: center;
+	color: white;
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: 41;
+    top: 127px;
+    cursor: pointer;
+}
+
+#learn_more_text {
+    width: 250px;
+	height: 14px;
+	font-family: "Verdana", sans-serif;
+	font-size: 18px;
+	font-weight: lighter;
+	text-align: center;
+	color: white;
+    opacity: 1.0;
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: 41;
+    top: 15px;
+}
+
+#edsurge_title {
+    width: 600px;
+	height: 14px;
+	font-family: "Verdana", sans-serif;
+	font-size: 24px;
+	font-weight: lighter;
+	text-align: center;
+	color: white;
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: 41;
+    top: 25px;
+}
+
+#5_stars {
+    position: relative;
+    top: 800px;
+    width: 100px;
+    height: 25%;
+    display: block;
+    margin: auto;
+    object-fit: cover
+}
+
+#edsurge_descriptor {
+    width: 750px;
+	height: 80px;
+    top: 125px;
+    position: relative;
+    display: block;
+    margin: auto;
+    
+	font-family: sans-serif;
+	font-size: 27.5px;
+	line-height: 1.36;
+	text-align: center;
+	color: #9b9b9b;
+}
+
+#edsurge_logo {
+    width: 100px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 145px;
+}
+
+#main_image {
+    left: 0px;
+    top: 70px;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+#main_text {
+    width: 440px; 
+    position: absolute; 
+    top: 130px; 
+    left: 50px; 
+    height: 92px; 
+    font-family: sans-serif; 
+    font-size: 40px; 
+    font-weight: 800; 
+    line-height: 1.28; 
+    color: #06274E
+}
+
+#sub_text {
+    width: 400px; 
+    height: 60px; 
+    font-family: Roboto; 
+    font-size: 22.5px; 
+    line-height: 1.33; 
+    position: absolute; 
+    top: 300px; 
+    left: 50px; 
+    color: rgba(0, 0, 0, .8);
+}
+
+#learn_more {
+    height: 50px; 
+    background-color: rgba(169,169,169,0.7);
+    width: 100vw;
+    z-index: 45;
+    bottom: 0px;
+    position: fixed;
+    transition: bottom 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+#button_text_main {
+    position: relative;
+    bottom: 160px;
+    display: block;
+    margin: auto;
+    background-color: #00cc00;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 30px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 217.25px;
+    column-rule-color: rgb(255, 255, 255);
+    align-self: center;
+    perspective-origin: 108.625px 22.5px;
+    transform-origin: 108.625px 22.5px;
+    user-select: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px 30px 30px 30px;
+    font: normal normal bold normal 14px / 14px sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 16px 8px 27px
+}
+
+#button_text_main:hover {
+    background-color:rgba(57,255,20, 0.7)
+}
+
+#video_frame {
+    border: 3px solid #ffffff; 
+    position: fixed; 
+    z-index: 50;  
+    visibility: hidden
+}
+
+#close_but {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    z-index: 51;
+    visibility: hidden;
+    cursor: pointer;
+}
