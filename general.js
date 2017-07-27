@@ -26,9 +26,9 @@
   var scrollSeventyFive = true;
   var scrollOneHundred = true;
         
-  function setDistinct() {
+  /*function setDistinct() {
     document.getElementById("signup_screen").contentWindow.postMessage(mixpanel.get_distinct_id(), '*');
-  }
+  }*/
 
   window.onmessage = function(e){
       window.location = e.data;
