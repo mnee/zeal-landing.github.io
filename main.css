@@ -169,7 +169,7 @@ body {
 }
 
 #section_2 {
-    height: 170px; 
+    height: 150px; 
     position: relative;
     top: 235px;
     background-color: #656690; 
@@ -179,7 +179,7 @@ body {
 
 #descriptors {
     position: relative; 
-    top:25px;
+    top:25px; 
     width: 800px; 
     height: 100px; 
     object-fit: cover; 
@@ -246,7 +246,6 @@ body {
     z-index: 39;
     object-fit: cover;
     object-position: 10% 40%;
-    transform: scaleX(-1);
 }
 
 #play_button {
@@ -284,7 +283,6 @@ body {
 	font-weight: lighter;
 	text-align: center;
 	color: white;
-    opacity: 1.0;
     position: relative;
     display: block;
     margin: auto;
@@ -309,10 +307,12 @@ body {
 
 #5_stars {
     position: relative;
-    top: 100px;
-    width: 350px;
+    top: 800px;
+    width: 100px;
+    height: 25%;
     display: block;
     margin: auto;
+    object-fit: cover
 }
 
 #edsurge_descriptor {
@@ -404,8 +404,6 @@ body {
     border-radius: 30px 30px 30px 30px;
     font: normal normal bold normal 14px / 14px sans-serif;
     outline: rgb(255, 255, 255) none 0px;
-    vertical-align: middle;
-    text-align: center;
     padding: 16px 8px 27px
 }
 
@@ -417,7 +415,7 @@ body {
     border: 3px solid #ffffff; 
     position: fixed; 
     z-index: 50;  
-    display: none;
+    visibility: hidden
 }
 
 #close_but {
@@ -425,166 +423,6 @@ body {
     height: 30px;
     position: fixed;
     z-index: 51;
-    display: none;
-    cursor: pointer;
-}
-
-#signup_screen {
-    width: 100vw; 
-    height: 100vh; 
-    position: fixed; 
-    bottom: -100vh; 
-    z-index: -1;
     visibility: hidden;
-    transition: bottom 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-}
-
-#signup_close {
-    width: 150px;
-    height: 40px;
-    position: fixed;
-    top: 100vh;
-    background-color: #06274E; 
-    z-index: -2;
     cursor: pointer;
-    visibility: hidden;
-    transition: top 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-}
-
-#down_arrow {
-    font-size: 50px;
-    padding-left:66px; 
-    position: fixed; 
-    width: 50px; 
-    height: 40px; 
-    z-index: -1; 
-    top: 100vh; 
-    color: white;
-    cursor: pointer;
-    visibility: hidden;
-    transition: top 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-}
-
-#descriptors_mobile {
-    display: none;
-}
-
-.descriptor_titles {
-    text-align: center;
-    padding-right: 50px;
-    vertical-align: middle;
-    display: table-cell;
-}
-
-.descriptor_text {
-    width: 200px;
-    padding: 20px 0px;
-    height: 160px;
-    color: #DDDDDD;
-    float: left;
-    display: table-cell;
-}
-
-
-.descriptor_row {
-    display: table-row;
-    border-bottom: 1pt solid white;
-}
-
-#contact_section {
-    height: 75px; 
-    position: relative; 
-    background-color: #656690; 
-    top: 500px; 
-    width: 100vw; 
-    z-index: 29;
-}
-
-@media only screen and (max-width: 736px) {
-    /* For mobile phones: */
-    #main_text {
-        font-size: 32px;
-        width: 250px;
-        top: 100px;
-    }
-    
-    #sub_text {
-        font-size: 20px;
-        top: 280px;
-        width: 260px;
-    }
-    
-    #descriptors {
-        display: none;
-    }
-    
-    #section_2 {
-        height: 490px;
-    }
-    
-    #descriptors_mobile {
-        position: relative; 
-        top:25px;
-        width: 80vw; 
-        height: 100px; 
-        font-family: sans-serif;
-        color: white;
-        display: table; 
-        margin:auto;
-    }
-    
-    #edsurge_title {
-        font-size: 18px;
-        width: 300px;
-        top: 30px;
-    }
-    
-    #edsurge_descriptor {
-        font-size: 20px;
-        width: 90vw;
-    }
-    
-    #contact {
-        width: 370px;
-        height: 18px;
-        top: 27px;
-    }
-    
-    #edsurge_logo {
-        top: 170px;
-    }
-    
-    #button_text_main {
-        top: -190px;
-        padding: 10px 8px 27px
-    }
-    
-    #button_text_2 {
-        padding: 10px 8px 27px
-    }
-    
-}
-
-@media only screen and (max-width: 736px) and (orientation: landscape) {
-    #main_text {
-        top: 60px;
-        width: 440px;
-    }
-    
-    #sub_text {
-        width: 400px;
-        top: 140px;
-    }
-    
-    #button_text_main {
-        top: -100px;
-    }
-    
-    #edsurge_logo {
-        top: 150px;
-    }
-    
-    #edsurge_descriptor {
-        font-size: 23px;
-    }
 }
