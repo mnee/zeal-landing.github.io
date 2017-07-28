@@ -164,12 +164,12 @@ function trackEdsurge() {
 
 function handleToken(data) {
     console.log(data.data.session.access_token);
-    mixpanel.track("landing_signup");
     window.location="https://parent.zeal.com/#!/accessToken/" + data.data.session.access_token + "?dest=/activation/name";
     //window.location = "https://parent.zeal.com/#!/accessToken/" + data.data.session.access_token + "?dest=/activation/name";
 }
 
 function signup() {
+    mixpanel.track("landing_signup");
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     var prof = {"user":{"first_name": email, "last_name": "Tutoring", "name": email, "password": password}};
