@@ -15,8 +15,8 @@
         });
        //console.log(state.getVariationMap()[exp_id].name);
         var user_id = mixpanel.get_distinct_id();
-        //document.getElementById("button_foot_link").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
-       // document.getElementById("button_foot_link_1").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
+        document.getElementById("button_foot_og_link").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
+        document.getElementById("button_foot_og_link_1").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
     }
 });
  
@@ -26,6 +26,8 @@
       document.getElementById("in_page_signup").style.bottom = "0px";
       document.getElementById("external_signup").style.bottom = "0px";
       document.getElementById("button_text_main").style.zIndex = "-1";
+      document.getElementById("button_text_main_og").style.zIndex = "-1";
+      document.getElementById("og_signup").style.bottom = "0px";
   }, 3000);
 
   // Variables to prevent continuous firing of custom events
@@ -51,6 +53,8 @@
         document.getElementById("in_page_signup").style.bottom = "0px";
         document.getElementById("learn_more").style.bottom = "-85px";
         document.getElementById("button_text_main").style.zIndex = "-1";
+        document.getElementById("button_text_main_og").style.zIndex = "-1";
+        document.getElementById("og_signup").style.bottom = "0px";
       }
       // Conditional code we'll use to fire events based on scrollPercentage.
       
