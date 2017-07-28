@@ -59,7 +59,7 @@ body {
     transition: bottom 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
-#button_text_2 {
+.button_text_2 {
     position: relative;
     bottom: -17.5px;
     color: white;
@@ -83,7 +83,7 @@ body {
     padding: 16px 8px 27px
 }
     
-#button_text_2:hover {
+.button_text_2:hover {
     background-color:rgba(57,255,20, 0.7)
 }
 
@@ -382,7 +382,7 @@ body {
     transition: bottom 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
-#button_text_main {
+.button_text_main {
     visibility: visible;
     position: relative;
     bottom: 160px;
@@ -410,7 +410,7 @@ body {
     padding: 16px 8px 27px
 }
 
-#button_text_main:hover {
+.button_text_main:hover {
     background-color:rgba(57,255,20, 0.7)
 }
 
@@ -611,12 +611,12 @@ input:-webkit-autofill {
         top: 170px;
     }
     
-    #button_text_main {
+    .button_text_main {
         top: -190px;
         padding: 10px 8px 27px
     }
     
-    #button_text_2 {
+    .button_text_2 {
         padding: 10px 8px 27px
     }
     
@@ -644,7 +644,7 @@ input:-webkit-autofill {
         top: 140px;
     }
     
-    #button_text_main {
+    .button_text_main {
         top: -100px;
     }
     
@@ -662,9 +662,71 @@ input:-webkit-autofill {
 }
 
 #button_foot_link_1 {
-    
+    visibility: visible;
 }
 
 #in_page_signup {
     visibility: hidden;
+}
+
+#og_signup {
+    visibility: hidden;
+}
+
+#button_text_main_og {
+    position: relative;
+    bottom: 160px;
+    display: none;
+    margin: auto;
+    background-color: #00cc00;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 40px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 217.25px;
+    column-rule-color: rgb(255, 255, 255);
+    align-self: center;
+    perspective-origin: 108.625px 22.5px;
+    transform-origin: 108.625px 22.5px;
+    user-select: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px 30px 30px 30px;
+    font: normal normal bold normal 14px / 14px sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 16px 8px 27px;
+}
+
+#button_text_main {
+    position: relative;
+    bottom: 160px;
+    display: block;
+    margin: auto;
+    background-color: #00cc00;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 40px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 217.25px;
+    column-rule-color: rgb(255, 255, 255);
+    align-self: center;
+    perspective-origin: 108.625px 22.5px;
+    transform-origin: 108.625px 22.5px;
+    user-select: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px 30px 30px 30px;
+    font: normal normal bold normal 14px / 14px sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 16px 8px 27px;
+}
+
+#button_text_main:hover {
+    background-color:rgba(57,255,20, 0.7)
+}
+
+#button_text_main_og:hover {
+    background-color:rgba(57,255,20, 0.7);
 }
