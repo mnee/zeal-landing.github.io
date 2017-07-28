@@ -8,18 +8,25 @@
         // Get state settings from optimizely object
         var state = optimizely.get('state');
         var exp_id = state.getActiveExperimentIds()[0];
-        //mixpanel.track("landing_page_load");
         mixpanel.track("landing_page_load", {
             "Experiment Name": optimizely.get('data').experiments[exp_id].name,
             "Variation Name": state.getVariationMap()[exp_id].name        
         });
        //console.log(state.getVariationMap()[exp_id].name);
         var user_id = mixpanel.get_distinct_id();
-        //document.getElementById("button_foot_link").href = 'https://parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
-       // document.getElementById("button_foot_link_1").href = 'https://parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
+        //document.getElementById("button_foot_link").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
+       // document.getElementById("button_foot_link_1").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
     }
 });
  
+  // Tracking time spent on page
+  setTimeout(function(){
+      document.getElementById("learn_more").style.bottom = "-85px";
+      document.getElementById("in_page_signup").style.bottom = "0px";
+      document.getElementById("external_signup").style.bottom = "0px";
+      document.getElementById("button_text_main").style.zIndex = "-1";
+  }, 3000);
+
   // Variables to prevent continuous firing of custom events
   var scrollTwentyFive = true;
   var scrollFifty = true;
@@ -39,7 +46,8 @@
       window.scrollPercent = ($(window).scrollTop() / ($(document).height() - $(window).height())) * 100;
 
       if ($(window).scrollTop() >= 70) {
-        document.getElementById("footer_signup").style.bottom = "0px";
+        document.getElementById("external_signup").style.bottom = "0px";
+        document.getElementById("in_page_signup").style.bottom = "0px";
         document.getElementById("learn_more").style.bottom = "-85px";
         document.getElementById("button_text_main").style.zIndex = "-1";
       }
@@ -96,7 +104,7 @@ function trackButton() {
 }
             
 function closeSignup() {
-    mixpanel.track("closed_signup_screen");
+    mixpanel.track("closed_signup_screen")
     document.getElementById("signup_screen").style.bottom="-100vh";
     document.getElementById("signup_close").style.top="100vh";
     document.getElementById("down_arrow").style.top="100vh";
@@ -151,3 +159,80 @@ function trackVideo() {
 function trackEdsurge() {
     mixpanel.track("opened_edsurge");
 }
+
+/*********SIGNUP CODE*********/
+
+function handleToken(data) {
+    console.log(data.data.session.access_token);
+    mixpanel.track("landing_signup");
+    window.location="https://parent.zeal.com/#!/accessToken/" + data.data.session.access_token + "?dest=/activation/name";
+    //window.location = "https://parent.zeal.com/#!/accessToken/" + data.data.session.access_token + "?dest=/activation/name";
+}
+
+function signup() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var prof = {"user":{"first_name": email, "last_name": "Tutoring", "name": email, "password": password}};
+    console.log(JSON.stringify(prof));
+    $.post("https://api.zeal.com/v7/public/users/parent", prof).done(handleToken);
+}
+
+var emailMix = true;
+var passMix = true;
+
+setInterval(function(){
+    
+    // 8 chars, 1 Let, 1 Num
+    var curPass = document.getElementById("password").value;
+
+    var length = false;
+    var letter = false;
+    var num = false;
+    var email = false;
+
+    var curEmail = document.getElementById("email").value;
+    var leftSpace = ($(window).width()-700)/2;
+    document.getElementById("email").style.marginLeft = leftSpace.toString() + 'px';
+    
+    if (document.getElementById("signup_button").style.fontSize !== "12px") {
+        document.getElementById("signup_button").style.marginRight = leftSpace.toString() + 'px';
+    } else {
+        document.getElementById("signup_button").style.marginRight = "200px";
+    }
+    
+    for (var i=0; i<curEmail.length; i++) {
+        var char = curEmail.charAt(i);
+        if (char === '@') {
+            email = true;
+            if (emailMix) {
+                mixpanel.track("email_entered");
+                emailMix = false;
+            }
+        }
+    }
+
+    if (curPass.length >= 8) length = true;
+
+    for (var i=0; i<curPass.length; i++) {
+        var char = curPass.charAt(i);
+        if ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z')) letter = true;
+        if (char >= '0' && char <= '9') num = true;
+    }
+
+    var button = document.getElementById("signup_button");
+    if (length && letter && num) {
+        if (passMix) {
+            mixpanel.track("password_entered");
+            passMix = false;
+        }
+
+        if (email) {
+            button.style.pointerEvents="all";
+            button.style.backgroundColor="rgb(19,178,197)";
+        }
+    } else {
+
+        button.style.pointerEvents="none";
+        button.style.backgroundColor="transparent";
+    }
+}, 100);
