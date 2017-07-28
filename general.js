@@ -186,19 +186,20 @@ setInterval(function(){
     // 8 chars, 1 Let, 1 Num
     var curPass = document.getElementById("password").value;
 
-    var length = false;
+     var length = false;
     var letter = false;
     var num = false;
     var email = false;
 
     var curEmail = document.getElementById("email").value;
     var leftSpace = ($(window).width()-700)/2;
-    document.getElementById("email").style.marginLeft = leftSpace.toString() + 'px';
     
-    if (document.getElementById("signup_button").style.fontSize !== "12px") {
+    if ($(window).width() >= 736) {
+        document.getElementById("email").style.marginLeft = leftSpace.toString() + 'px';
         document.getElementById("signup_button").style.marginRight = leftSpace.toString() + 'px';
     } else {
-        document.getElementById("signup_button").style.marginRight = "200px";
+        document.getElementById("email").style.marginLeft = "30px";
+        document.getElementById("signup_button").style.marginRight = "30px";
     }
     
     for (var i=0; i<curEmail.length; i++) {
