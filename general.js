@@ -15,8 +15,8 @@
         });
        //console.log(state.getVariationMap()[exp_id].name);
         var user_id = mixpanel.get_distinct_id();
-        document.getElementById("button_foot_og_link").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
-        document.getElementById("button_foot_og_link_1").href = 'https://stg-parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
+        document.getElementById("button_foot_og_link").href = 'https://parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
+        document.getElementById("button_foot_og_link_1").href = 'https://parent.zeal.com/#!/landing?mode=createAccount&mixpanelDistinctId=' + user_id;
     }
 });
  
