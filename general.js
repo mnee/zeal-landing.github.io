@@ -10,7 +10,8 @@
         var exp_id = state.getActiveExperimentIds()[0];
         mixpanel.track("landing_page_load", {
             "Experiment Name": optimizely.get('data').experiments[exp_id].name,
-            "Variation Name": state.getVariationMap()[exp_id].name        
+            "Variation Name": state.getVariationMap()[exp_id].name,
+            "Screen Width": $(window).width()
         });
        //console.log(state.getVariationMap()[exp_id].name);
         var user_id = mixpanel.get_distinct_id();
