@@ -14,6 +14,10 @@
     
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="general.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <header class="hc1" data-state=" " id="header_1" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER">
@@ -21,7 +25,16 @@
 </header>
     
 <footer>
-    <div id="footer_signup">
+    <div class="footer_signup" id="in_page_signup">
+        <form>
+            <input placeholder="Email" id="email" type="email" required/>
+            <input placeholder="Password" id="password" type="password" required/>
+            <a href="#" onclick="signup()">
+                <div id="signup_button">Start Free Trial</div>
+            </a>
+        </form>
+    </div>
+    <div class="footer_signup" id="external_signup">
         <a id="button_foot_link" style="text-decoration: none;" onclick="trackButton()">
             <div id="button_text_2">Start Free Trial</div>
         </a>
