@@ -177,9 +177,9 @@ function signup() {
     mixpanel.track("landing_signup");
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    var prof = {"user":{"first_name": email, "last_name": "Tutoring", "name": email, "password": password}};
+    var prof = {"user":{"first_name": email, "last_name": "Tutoring", "name": email, "password": password}, "temp_id": mixpanel.get_distinct_id()};
     console.log(JSON.stringify(prof));
-    $.post("https://api.zeal.com/v7/public/users/parent", prof).done(handleToken);
+    $.post("https://api.zeal.com/v7/public/users/parent", JSON.stringify(prof)).done(handleToken);
 }
 
 var emailMix = true;
