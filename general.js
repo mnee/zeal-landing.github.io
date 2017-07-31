@@ -109,7 +109,7 @@ function trackButton() {
 }
             
 function closeSignup() {
-    mixpanel.track("closed_signup_screen")
+    mixpanel.track("closed_signup_screen");
     document.getElementById("signup_screen").style.bottom="-100vh";
     document.getElementById("signup_close").style.top="100vh";
     document.getElementById("down_arrow").style.top="100vh";
