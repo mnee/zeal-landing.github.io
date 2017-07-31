@@ -87,80 +87,6 @@ body {
     background-color:rgba(57,255,20, 0.7)
 }
 
-#myCarousel {
-    width: 100%; 
-    position:absolute; 
-    left:0; 
-    right:0; 
-    z-index: -1
-}
-
-.carousel_image {
-    width: 100vw; 
-    height: 526px; 
-    object-fit: cover
-}
-
-.carousel_text_box {
-    position: absolute; 
-    top: 70px; 
-    width: 415px; 
-    height: 400px; 
-    background-color: white; 
-    opacity: 0.8
-}
-
-.carousel_text_1 {
-    position: absolute; 
-    top: 120px; 
-    width: 300px; 
-    font-family: Baskerville, Geneva, sans-serif; 
-    font-size: 18px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 600; 
-    color: black; 
-    letter-spacing: 2px
-}
-
-.carousel_text_2 {
-    position: absolute; 
-    top: 150px; 
-    width: 320px; 
-    font-family: Baskerville, Geneva, sans-serif; 
-    font-size: 20px; 
-    font-style: italic; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 45px; 
-    color: black
-}
-
-.carousel_text_3 {
-    position: absolute; 
-    top: 200px; 
-    width: 320px; 
-    font-family: Verdana, Geneva, sans-serif; 
-    font-size: 30px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 45px; 
-    color: #06274E
-}
-
-.carousel_text_4 {
-    position: absolute; 
-    width: 320px; 
-    font-family: Baskerville, Geneva, sans-serif; 
-    font-size: 20px; 
-    font-style: italic; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 45px; 
-    color: black
-}
-
 .blue_strip {
     height: 85px; 
     background-color: #06274E; 
@@ -501,62 +427,6 @@ body {
     z-index: 29;
 }
 
-#email {
-    width: 200px;
-    font-size: 20px;
-    margin-left: 10vw;
-    margin-top: 15px;
-    color: white;
-}
-
-#email:focus {
-    color: white;
-    border-bottom-color: rgb(19, 178, 197);
-}
-
-#password {
-    margin-left: 30px;
-    margin-top: 15px;
-    font-size: 20px;
-    width: 200px;
-    color: white;
-}
-
-#password:focus {
-    color: white;
-    border-bottom-color: rgb(19, 178, 197);
-}
-
-#signup_button {
-    float: right;
-    padding-top: 12px;
-    margin-right: 155px;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 200px;
-    color: rgba(255,255,255,0.8);
-    height: 40px;
-    cursor: pointer;
-    background-color: transparent;
-    letter-spacing: 0.4px;
-    text-align: center;
-    text-decoration: none solid rgb(19, 178, 197);
-    text-transform: uppercase;
-    border: 2px solid rgb(19, 178, 197);
-    border-radius: 1px 1px 1px 1px;
-    font: normal normal normal normal 14px / 14px sans-serif;
-}
-
-#signup_button:hover {
-    background-color: rgb(19, 178, 197);
-    color: white;
-}
-
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 100px rgb(6,39,78) inset !important;
-    -webkit-text-fill-color: white;
-}
-
 @media only screen and (max-width: 736px) {
     /* For mobile phones: */
     #main_text {
@@ -619,18 +489,6 @@ input:-webkit-autofill {
     .button_text_2 {
         padding: 10px 8px 27px
     }
-    
-    #email, #password, #signup_button {
-        width: 25vw;
-    }
-    
-    #email, #password {
-        font-size: 2.5vw;
-    }
-    
-    #signup_button {
-        font-size: 2vw;
-    }
 }
 
 @media only screen and (max-width: 736px) and (orientation: landscape) {
@@ -665,41 +523,8 @@ input:-webkit-autofill {
     visibility: visible;
 }
 
-#in_page_signup {
-    visibility: hidden;
-}
-
-#og_signup {
-    visibility: hidden;
-}
-
-#button_text_main_og {
-    position: relative;
-    bottom: 160px;
-    display: none;
-    margin: auto;
-    background-color: #00cc00;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    height: 40px;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-transform: uppercase;
-    white-space: nowrap;
-    width: 217.25px;
-    column-rule-color: rgb(255, 255, 255);
-    align-self: center;
-    perspective-origin: 108.625px 22.5px;
-    transform-origin: 108.625px 22.5px;
-    user-select: none;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 30px 30px 30px 30px;
-    font: normal normal bold normal 14px / 14px sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-    padding: 16px 8px 27px;
-}
-
 #button_text_main {
-    visibility: hidden;
+    visibility: visible;
     position: relative;
     bottom: 160px;
     display: block;
@@ -726,8 +551,4 @@ input:-webkit-autofill {
 
 #button_text_main:hover {
     background-color:rgba(57,255,20, 0.7)
-}
-
-#button_text_main_og:hover {
-    background-color:rgba(57,255,20, 0.7);
 }
