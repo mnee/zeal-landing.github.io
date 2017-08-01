@@ -59,7 +59,7 @@ body {
     transition: bottom 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
-.button_text_2 {
+#button_text_2 {
     position: relative;
     bottom: -17.5px;
     color: white;
@@ -83,7 +83,7 @@ body {
     padding: 16px 8px 27px
 }
     
-.button_text_2:hover {
+#button_text_2:hover {
     background-color:rgba(57,255,20, 0.7)
 }
 
@@ -149,7 +149,7 @@ body {
 #footer_space {
     height: 115px; 
     position: relative; 
-    top: 465px; 
+    top: 965px; 
     background-color: white; 
     width: 100vw;
 }
@@ -221,9 +221,9 @@ body {
 #edsurge_title {
     width: 600px;
 	height: 14px;
-	font-family: "Verdana", sans-serif;
+	font-family: Roboto, sans-serif;
 	font-size: 24px;
-	font-weight: lighter;
+	font-weight: normal;
 	text-align: center;
 	color: white;
     position: relative;
@@ -259,7 +259,7 @@ body {
 #edsurge_logo {
     width: 100px;
     display: block;
-    margin: auto;
+    margin-left: 45vw;
     position: relative;
     top: 145px;
 }
@@ -308,8 +308,7 @@ body {
     transition: bottom 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
-.button_text_main {
-    visibility: visible;
+#button_text_main {
     position: relative;
     bottom: 160px;
     display: block;
@@ -336,7 +335,7 @@ body {
     padding: 16px 8px 27px
 }
 
-.button_text_main:hover {
+#button_text_main:hover {
     background-color:rgba(57,255,20, 0.7)
 }
 
@@ -422,12 +421,12 @@ body {
     height: 75px; 
     position: relative; 
     background-color: #656690; 
-    top: 500px; 
+    top: 1000px; 
     width: 100vw; 
     z-index: 29;
 }
 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 797px) {
     /* For mobile phones: */
     #main_text {
         font-size: 32px;
@@ -481,14 +480,15 @@ body {
         top: 170px;
     }
     
-    .button_text_main {
+    #button_text_main {
         top: -190px;
         padding: 10px 8px 27px
     }
     
-    .button_text_2 {
+    #button_text_2 {
         padding: 10px 8px 27px
     }
+    
 }
 
 @media only screen and (max-width: 736px) and (orientation: landscape) {
@@ -502,7 +502,7 @@ body {
         top: 140px;
     }
     
-    .button_text_main {
+    #button_text_main {
         top: -100px;
     }
     
@@ -512,43 +512,177 @@ body {
     
     #edsurge_descriptor {
         font-size: 23px;
+    }  
+}
+
+#tutors_title {
+    width: 600px;
+	height: 14px;
+	font-family: Roboto, sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	text-align: center;
+	color: white;
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: 41;
+    top: 25px;
+}
+
+#tutor_container {
+    position: relative;
+    width: 100vw;
+    height: 800px;
+    top: 70px;
+}
+
+#tutor_sub_head {
+	width: 30vw;
+    margin-left: 10vw;
+	height: 75px;
+	font-family: Roboto;
+	font-size: 2.2vw;
+	line-height: 1.36;
+	color: #13b2c5;
+    position: relative;
+    top: 90px;
+}
+
+#tutor_description {
+    width: 30vw;
+	height: 200px;
+	font-family: Roboto;
+	font-size: 1.25vw;
+	line-height: 1.61;
+	letter-spacing: 1.8px;
+	color: #4a4a4a;
+    position: relative;
+    top: 85px;
+    margin-left: 10vw;
+}
+
+#tutor_card_container {
+    width: 50vw;
+    height: 390px;
+    position: relative;
+    float: right;
+    top: -240px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.tutor_card {
+    float: left;
+    position: absolute;
+    width: 30vw;
+    height: 380px;
+    z-index: 39;
+    min-height: 300px;
+    margin-top, margin-bottom: 5px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 2.5px;
+	background-color: #ffffff;
+	background-color: var(--white);
+	box-shadow: -1px 1px 5px 0 rgba(0, 0, 0, 0.1);
+    transition: left 1200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+.tutor_name {
+    width: 28vw;
+    margin: 2vw 0vw 0vw 2vw;
+	height: 30px;
+	font-family: Roboto, sans-serif;
+	font-size: 1.7vw;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #4a4a4a;
+}
+
+.tutor_title {
+    width: 28vw;
+    margin-top: -.65vw;
+    margin-left: 2vw;
+	height: 30px;
+	font-family: Roboto, sans-serif;
+	font-size: 1.4vw;
+	font-weight: 300;
+	line-height: 1.5;
+	color: #4a4a4a;
+}
+
+.tutor_bio {
+    width: 26vw;
+    margin-left: 2vw;
+	height: 12vw;
+	font-family: Roboto, sans-serif;
+	font-size: 1.2vw;
+	font-weight: 300;
+	line-height: 1.5;
+    overflow: scroll;
+	color: #4a4a4a;
+}
+
+@media only screen and (min-width: 881px) {
+    .tutor_name {
+        font-size: 15.81px;   
+    }
+    
+    .tutor_title {
+        font-size: 13.02px;
+    }
+    
+    .tutor_bio {
+        font-size: 10.572px;
+    }
+    
+    #tutor_sub_head {
+        font-size: 18px;
+    }
+    
+    #tutor_description, #background_check_text {
+        font-size: 12px;
     }
 }
 
-#external_signup {
-    visibility: visible;
+#tutor_kelsey {
+    left: 32vw;
 }
 
-#button_foot_link_1 {
-    visibility: visible;
+#tutor_gradient {
+    position: absolute;
+    width: 18vw;
+    height: 40vw;
+    right: 0px;
+    z-index: 40;
+    top: 35px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.0), #ffffff);
 }
 
-#button_text_main {
-    visibility: visible;
-    position: relative;
-    bottom: 160px;
-    display: block;
-    margin: auto;
-    background-color: #00cc00;
-    color: rgb(255, 255, 255);
+#next_tutor {
     cursor: pointer;
-    height: 40px;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-transform: uppercase;
-    white-space: nowrap;
-    width: 217.25px;
-    column-rule-color: rgb(255, 255, 255);
-    align-self: center;
-    perspective-origin: 108.625px 22.5px;
-    transform-origin: 108.625px 22.5px;
-    user-select: none;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 30px 30px 30px 30px;
-    font: normal normal bold normal 14px / 14px sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-    padding: 16px 8px 27px;
 }
 
-#button_text_main:hover {
-    background-color:rgba(57,255,20, 0.7)
+#tutor_caroline {
+    left: -32vw;
+    visibility: visible;
+}
+
+#tutor_adam {
+    left: 64vw;
+    visibility: visible;
+}
+
+#background_check_text {
+    width: 30vw;
+	height: 50px;
+    top: 320px;
+	font-family: Roboto;
+	font-size: 1.25vw;
+	line-height: 1.61;
+	letter-spacing: 1.8px;
+	color: grey;
+    position: absolute;
+    margin-left: 10vw;
 }

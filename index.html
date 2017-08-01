@@ -14,10 +14,16 @@
     
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="general.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            fillTutorVars();
+        });
+    </script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
 </head>
 
 <header class="hc1" data-state=" " id="header_1" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER">
@@ -27,7 +33,7 @@
 <footer>
     <div class="footer_signup" id="external_signup">
         <a id="button_foot_link" style="text-decoration: none;" onclick="trackButton()">
-            <div class="button_text_2">Start Free Trial</div>
+            <div id="button_text_2">Start Free Trial</div>
         </a>
     </div>
 </footer>
@@ -38,8 +44,9 @@
     
     <div id="sub_text">Join 40,000 K-8 students getting unlimited, live tutoring on Zeal for only $49. 99 a month!</div>
     <a id="button_foot_link_1" style="text-decoration: none;" onclick="trackButton()">
-        <div id="button_text_main" style="padding: 12px 43px;">Start Free Trial</div>
+        <div id="button_text_main">Start Free Trial</div>
     </a>
+    
     <section id="learn_more"><span id="learn_more_text">LEARN MORE ▼</span>
     </section>  
     
@@ -86,12 +93,57 @@
         </table>
     </section>
     
-    <a href="https://www.edsurge.com/product-reviews/zeal-product" target="_blank" onclick="trackEdsurge()" style="text-decoration: none;"><section class="blue_strip" style="top: 234px; position: relative;">
-        <div id="edsurge_title">5 STAR RATING ON EDSURGE</div>
-        <img src="5-stars-spaced.png" id="5_stars" style="width: 350px; display: block; margin: auto; top: 100px; position: relative">
-        <div id="edsurge_descriptor">EdSurge is the leading site for educators, entrepreneurs and investors involved in education technology.</div>
-        <a href="https://www.edsurge.com/product-reviews/zeal-product" target="_blank" onclick="trackEdsurge()"><img src="EdSurgeLogo.svg" id="edsurge_logo"></a>
-    </section></a>
+    <section class="blue_strip" style="position: relative; top: 234px;">
+        <div id="tutors_title">MEET OUR TUTORS</div>
+        <div id="tutor_container">
+            <div id="tutor_sub_head">Unmatched visibility into your child’s learning and instruction</div>
+            <div id="tutor_description">Zeal tutors are former teachers and math majors. Students love Zeal because our tutors focus on developing critical thinking skills and instilling confidence! To ensure the highest quality tutors, each applicant must excel through our Zeal Tutor Safety & Quality Process.
+            </div>
+            <div id="background_check_text">*We run background checks at the State, County, and Federal level.</div>
+            <div id="tutor_gradient">
+                <a id="next_tutor" onclick="slideTutors()">
+                    <img src="NextArrow.png" style="width: 60px; float: right; align-content: center; top: 18vw; position: relative;">
+                </a>
+            </div>
+            <div id="tutor_card_container">
+                <div class="tutor_card" id="tutor_rob">
+                    <img src="RobHeadshot.png" style="width: 30vw; height: 190px; object-fit: cover;">
+                    <div class="tutor_name">Rob Huizar<span><a href="https://www.linkedin.com/in/robert-huizar-7ab83971/" target="_blank" onclick="trackTutorLinkedin()"><img src="LinkedinArrow.png" style="width: 3.5vw; float: right; vertical-align: super;"></a></span></div>
+                    <div class="tutor_title">3 years as lead math coach at Zeal</div>
+                    <div class="tutor_bio">Hi. I'm Rob. At Zeal, we ask a lot of questions because that's the best way to get students thinking and feeling empowered. It's really exciting to talk with a student that's frustrated and get them to a place where they're excited. That’s a beautiful thing.</div>
+                </div>
+                <div class="tutor_card" id="tutor_kelsey">
+                    <img src="KelseyHeadshot.jpg" style="width: 30vw; height: 190px; object-fit: cover; object-position: 80% 30%">
+                    <div class="tutor_name">Kelsey Winchester<span><a href="https://www.linkedin.com/in/kelsey-winchester-47ab50130/" target="_blank" onclick="trackTutorLinkedin()"><img src="LinkedinArrow.png" style="width: 3.5vw; float: right; vertical-align: super;"></a></span></div>
+                    <div class="tutor_title">5 years of tutoring experience</div>
+                    <div class="tutor_bio">Hi!! I’m Kelsey. I’m very happy I get to help students with difficult concepts and math problems on Zeal. I love helping students gain the confidence they need to excel in their classes. Tutoring students has been a way to share the passion I have for learning while also helping students think like mathematicians.</div>
+                </div>
+                <div class="tutor_card" id="tutor_caroline">
+                    <img src="CarolineHeadshot.jpg" style="width: 30vw; height: 190px; object-fit: cover; object-position: 80% 30%">
+                    <div class="tutor_name">Caroline Roma<a href="https://www.linkedin.com/in/carolineroma/" target="_blank" onclick="trackTutorLinkedin()"><img src="LinkedinArrow.png" style="width: 3.5vw; float: right; vertical-align: super;"></a></div>
+                    <div class="tutor_title">5 years of classroom experience</div>
+                    <div class="tutor_bio">Hi! I'm Caroline and I am highly passionate about student success and have been in education for 8 years. I attended Tufts University for Biology and Environmental Studies. From there I immediately went into the classroom and taught 9th grade math and 6-8 grade science for 5 years.</div>
+                </div>
+                <div class="tutor_card" id="tutor_adam">
+                    <img src="AdamHeadshot.jpg" style="width: 30vw; height: 190px; object-fit: cover; object-position: 80% 30%">
+                    <div class="tutor_name">Adam Triplet<a href="https://www.linkedin.com/in/adam-triplett-5a90b3bb/" target="_blank" onclick="trackTutorLinkedin()"><img src="LinkedinArrow.png" style="width: 3.5vw; float: right; vertical-align: super;"></a></div>
+                    <div class="tutor_title">6 years of classroom experience</div>
+                    <div class="tutor_bio">Hi! I'm Adam and I love working with students of all ages and grades. I taught middle school math for 6 years, held math enrichment classes for 2nd graders, and facilited the math club. In addition to workng at Zeal, I supervise student teachers in mostly math classrooms at National-Louis University.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <a href="https://www.edsurge.com/product-reviews/zeal-product" target="_blank" onclick="trackEdsurge()" style="text-decoration: none;">
+        <section class="blue_strip" style="top: 700px; position: relative;">
+            <div id="edsurge_title">5 STAR RATING ON EDSURGE</div>
+            <img src="5-stars-spaced.png" id="5_stars" style="width: 350px; display: block; margin: auto; top: 100px; position: relative">
+            <div id="edsurge_descriptor">EdSurge is the leading site for educators, entrepreneurs and investors involved in education technology.</div>
+            <a href="https://www.edsurge.com/product-reviews/zeal-product" target="_blank" onclick="trackEdsurge()">
+                <img src="EdSurgeLogo.svg" id="edsurge_logo">
+            </a>
+        </section>
+    </a>
     
     <section>
     

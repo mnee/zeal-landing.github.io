@@ -10,8 +10,7 @@
         var exp_id = state.getActiveExperimentIds()[0];
         mixpanel.track("landing_page_load", {
             "Experiment Name": optimizely.get('data').experiments[exp_id].name,
-            "Variation Name": state.getVariationMap()[exp_id].name,
-            "Screen Width": $(window).width()
+            "Variation Name": state.getVariationMap()[exp_id].name        
         });
     }
 });
@@ -96,6 +95,11 @@ function closeSignup() {
     document.getElementById("signup_screen").style.bottom="-100vh";
     document.getElementById("signup_close").style.top="100vh";
     document.getElementById("down_arrow").style.top="100vh";
+    setTimeout(function() {
+        document.getElementById("signup_screen").style.visibility="hidden";
+        document.getElementById("signup_close").style.visibility="hidden";
+        document.getElementById("down_arrow").style.visibility="hidden";
+    }, 1200);
 }
 
 function closeFrame() {
@@ -146,4 +150,53 @@ function trackVideo() {
 
 function trackEdsurge() {
     mixpanel.track("opened_edsurge");
+}
+
+setInterval(function(){
+    document.getElementById("edsurge_logo").style.marginLeft = $(window).width()/2 - 50;
+    
+    var box = document.getElementById("signup_close").style;
+    var arrow = document.getElementById("down_arrow").style;
+    var leftShift = $(window).width()/2 - 75;
+    box.left=leftShift.toString() + 'px';
+    arrow.left=leftShift.toString() + 'px';
+    
+}, 100);
+
+var tutorA;
+var tutorB;
+var tutorC;
+var tutorD;
+
+var count = 0;
+function fillTutorVars() {
+    tutorC = document.getElementById("tutor_adam");
+    tutorA = document.getElementById("tutor_rob");
+    tutorB = document.getElementById("tutor_kelsey");
+    tutorD = document.getElementById("tutor_caroline");
+    slideTutors();
+}
+
+function trackTutorLinkedin() {
+    mixpanel.track("tutor_linkedin_clicked");
+}
+
+function slideTutors() {
+    if (count > 0) mixpanel.track("tutor_card_clicked");
+    
+    tutorC.style.zIndex = "-1";
+    tutorD.style.zIndex = "39";
+    
+    tutorC.style.left = "-32vw";
+    tutorD.style.left = "0vw";
+    tutorA.style.left = "32vw";
+    tutorB.style.left = "64vw";
+    
+    var temp = tutorC;
+    tutorC = tutorB;
+    tutorB = tutorA;
+    tutorA = tutorD;
+    tutorD = temp;
+    
+    count++;
 }
